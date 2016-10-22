@@ -66,6 +66,14 @@ app.post('/facebook', function(req, res) {
   res.sendStatus(200);
 });
 
+app.post('/vk', function(req, res) {
+  console.log('vk request body:');
+  console.log(req.body);
+  // Process the vk updates here
+  res.send('d6710394');
+  res.sendStatus(200);
+});
+
 app.post('/instagram', function(req, res) {
   console.log('Instagram request body:');
   console.log(req.body);
