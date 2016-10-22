@@ -33,6 +33,17 @@ app.get(['/facebook', '/instagram'], function(req, res) {
   }
 });
 
+app.get(['/vk'], function(req, res) {
+  if (
+    req.param('type') == 'confirmation' &&
+    req.param('group_id') == '116170139'
+  ) {
+    res.send(req.param('d6710394'));
+  } else {
+    res.sendStatus(400);
+  }
+});
+
 app.post('/facebook', function(req, res) {
   console.log('Facebook request body:');
 
